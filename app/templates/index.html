@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    
+    <h2>Sentiment Analysis</h2>
+    <textarea id="input" rows="4" cols="50"></textarea>
+    <br>
+    <button onclick="send()">Send</button>
+    <div id="response">
+        <h3>Sentiment Analysis results:</h3>
+    </div>
+    <script src="{{url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
