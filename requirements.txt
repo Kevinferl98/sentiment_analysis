@@ -1,3 +1,4 @@
 flask
 pymongo
 textblob
+flask_swagger_ui

@@ -1,0 +1,57 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Sentiment analysis"
+    },
+    "paths": {
+      "/sentiment_analysis": {
+        "post": {
+          "summary": "Sentiment analysis",
+          "description": "Returns sentiment analysis of the provided text",
+          "parameters": [
+            {
+              "name": "text",
+              "in": "body",
+              "description": "Text to analyze",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful sentiment analysis",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "polarity": {
+                    "type": "number"
+                  },
+                  "subjectivity": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request"
+            },
+            "500": {
+              "description": "Server error"
+            }
+          }
+        }
+      }
+    }
+  }
+  
