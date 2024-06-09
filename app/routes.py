@@ -3,7 +3,7 @@ from textblob import TextBlob
 from .mongo import MongoDB
 
 bp = Blueprint('routes', __name__)
-mongo = MongoDB('mongodb://localhost:27017', 'sentimentDB', 'sentiment_analysis')
+mongo = MongoDB('mongodb://db:27017', 'sentimentDB', 'sentiment_analysis')
 
 @bp.route('/')
 def index():
