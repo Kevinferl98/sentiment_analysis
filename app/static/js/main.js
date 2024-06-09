@@ -15,7 +15,8 @@ function send() {
     })
     .then(response => response.json())
     .then(data => {
-        var response = document.getElementById("response");
+        var response = document.getElementById("result");
+        response.innerHTML = "";
         response.innerHTML += "<p><strong>Polarity:</strong> " + data.polarity + "</p>";
         response.innerHTML += "<p><strong>Subjectivity:</strong> " + data.subjectivity + "</p>";
     })
